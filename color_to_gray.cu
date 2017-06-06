@@ -57,7 +57,7 @@ void rgba_to_greyscale(const uchar4* const rgbaImage,
   if (idx_y < numCols && idx_x < numRows){
       int idx = (numRows * idx_y) + idx_x;
       uchar4 color_temp = rgbaImage[idx];
-      greyImage[idx] = (0.229f * color_temp.x + 0.587f * color_temp.y + 0.114f * color_temp.z);
+      greyImage[idx] = (0.299f * color_temp.x + 0.587f * color_temp.y + 0.114f * color_temp.z);
     }  
 }
 
