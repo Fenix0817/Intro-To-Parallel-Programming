@@ -19,7 +19,7 @@ __global__ void increment_naive(int *g_array){
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     // Consecutive threads will increment consecutive elements, wrapping at ARRAY_SIZE
     i = i % ARRAY_SIZE;
-    g_array[i] = g_array[i] + 1
+    g_array[i] = g_array[i] + 1 // This includes a read+modify+add operation
 }
 
 // Driver Program
